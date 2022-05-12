@@ -117,4 +117,26 @@ export default {
     }
   }
 }
+
+@media screen and (max-width:1000px) {
+  .footerBlock{
+    height:100%;
+    .blockCenter{
+      .imgLink{
+        flex-direction:column;
+        margin-top:20px;
+        .link{
+          margin-top:15px;
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+
+          a{
+            margin-right:0;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

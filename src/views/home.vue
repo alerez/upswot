@@ -159,4 +159,53 @@ export default {
 
   }
 }
+
+@media screen and (max-width:1440px) {
+  .main{
+    &__text{
+      margin-top:9vh;
+    }
+  }
+}
+@media screen and (max-width:1167px) {
+  .home{
+    &__img{
+      height:65vh;
+
+      img{
+      }
+    }
+  }
+  .main{
+
+    &__login{
+      margin-top:50px;
+      margin-left:20px;
+      margin-right:20px;
+    }
+    &__text{
+      margin-top:5vh;
+      margin-left:20px;
+      margin-right:20px;
+      .context{
+        margin-top:50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:800px) {
+  .home{
+    display:none;
+  }
+
+  .main{
+    &__text{
+      .title{
+        color:$text-secondary;
+        font-size:40px;
+      }
+    }
+  }
+}
 </style>
