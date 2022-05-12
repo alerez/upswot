@@ -277,6 +277,11 @@ export default {
         }
       }
     }
+    .inpTodo{
+      .field{
+        margin:0;
+      }
+    }
   }
 }
 </style>
