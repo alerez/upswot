@@ -1,33 +1,11 @@
 import { createStore } from 'vuex'
 import router from '@/router/index.js'
+import createPersistedState from "vuex-persistedstate";
 
 export default createStore({
+  plugins: [createPersistedState()],
   state: {
     todo: [
-      {
-        text: 'Hello world',
-        done: false,
-      },
-      {
-        text: 'Hello world',
-        done: false,
-      },
-      {
-        text: 'Hello world',
-        done: false,
-      },
-      {
-        text: 'Hello world',
-        done: false,
-      },
-      {
-        text: 'Hello world1',
-        done: false,
-      },
-      {
-        text: 'Hello world',
-        done: false,
-      },
       {
         text: 'Hello world',
         done: false,

@@ -1,12 +1,20 @@
 <template>
   <div class="authorizationBlock">
-    <div class="form">
-      <field v-model="login" v-bind:text="'Name'" v-bind:type="'text'"/>
-      <field v-model="password" v-bind:text="'Password'"  v-bind:type="'password'"/>
-      <button-block @click="getLogin"/>
-    </div>
+    <form @submit.prevent="getLogin()" class="form">
+      <field v-model="login"
+             name="name"
+             v-bind:text="'Name'"
+             v-bind:type="'text'"
+      />
+      <field v-model="password"
+             name="password"
+             v-bind:text="'Password'"
+             v-bind:type="'password'"
+      />
+      <button-block/>
+    </form>
     <router-link class="linkForgot" to="/forgot">Forgot Password</router-link>
-    <button class="buttonReg" >Register now</button>
+    <button class="buttonReg" @click="getLogin">Register now</button>
 
   </div>
 </template>
@@ -15,13 +23,15 @@
 import Field from "@/components/field";
 import ButtonBlock from "@/components/buttonBlock";
 import { mapActions } from "vuex";
+
+
 export default {
   name: "authorizationBlock",
   components: {ButtonBlock, Field},
   data() {
     return {
-      login: 'Admin',
-      password: '12345'
+      login: '',
+      password: ''
     }
   },
   methods: {

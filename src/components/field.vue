@@ -3,7 +3,8 @@
     {{ text }}
     <input @input="updateInput"
            :value="modelValue"
-           :type="type" class="field__input">
+           :type="type" class="field__input"
+    required>
   </label>
 </template>
 

@@ -281,6 +281,10 @@ export default {
       .field{
         margin:0;
       }
+      button{
+        margin-top: 29px;
+        margin-left:0;
+      }
     }
   }
 }
