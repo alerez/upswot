@@ -34,9 +34,9 @@
               <button @click="taskDelete(keys)" class="delete">Delete</button>
             </div>
           </div>
-          <div v-else>
+          <div v-else class="taskContent">
             <div class="taskContent__input">
-              <field v-on:keyup.enter="taskEditDone({ text: editText, id:keys })" v-model="editText" type="textarea" text="Введите текст"/>
+              <field v-on:keyup.enter="taskEditDone({ text: editText, id:keys })" v-model="editText" type="text" text="Введите текст"/>
             </div>
             <div class="taskContent__button">
               <button @click="taskEditDone({ text: editText, id:keys })" class="done">Done</button>
@@ -165,6 +165,10 @@ export default {
     justify-content:center;
     align-items:end;
 
+    .field{
+      margin-left:0;
+    }
+
     button{
       width:80px;
       height:47px;
@@ -205,6 +209,11 @@ export default {
       background-color: #ececec;
       color:#333333;
 
+      &__input{
+        .field{
+          margin: 0
+        }
+      }
       &__button{
 
         .done{
@@ -246,6 +255,25 @@ export default {
           cursor:pointer;
 
           width:55px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .mainTodo{
+    .listTask{
+      .task{
+        .taskContent{
+          width:80vw;
+          flex-direction:column;
+
+          &__button{
+            margin-top:20px;
+            display:flex;
+            flex-direction:row;
+          }
         }
       }
     }
